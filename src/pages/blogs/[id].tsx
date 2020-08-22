@@ -1,7 +1,7 @@
 import React from "react";
 import fetch from "isomorphic-unfetch";
 
-const BlogId = ({ blog }) => {
+const BlogId = ({ blog }: any) => {
   return (
     <div>
       <h1>{blog.title}</h1>
@@ -12,7 +12,8 @@ const BlogId = ({ blog }) => {
           </React.Fragment>
         ))}
       </div>
-      <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
+      {/* eslint-disable-next-line react/no-danger */}
+      <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} />
     </div>
   );
 };
@@ -30,7 +31,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  const id = context.params.id;
+  const { id } = context.params;
 
   const key = {
     headers: { "X-API-KEY": process.env.API_KEY },
@@ -44,7 +45,7 @@ export const getStaticProps = async (context) => {
 
   return {
     props: {
-      blog: blog,
+      blog,
     },
   };
 };

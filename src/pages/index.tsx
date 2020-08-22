@@ -2,7 +2,7 @@ import React from "react";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 
-const Home = ({ blogs }) => {
+const Home = ({ blogs }: any): any => {
   return (
     <div>
       <h2>最新の記事</h2>
@@ -11,9 +11,7 @@ const Home = ({ blogs }) => {
         {blogs.map((blog) => (
           <React.Fragment key={blog.id}>
             <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
-              <a>
-                <h2>{blog.title}</h2>
-              </a>
+              <h2>{blog.title}</h2>
             </Link>
             {blog.tags.map((tag) => (
               <React.Fragment key={tag.id}>

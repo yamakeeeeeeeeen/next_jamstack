@@ -1,5 +1,5 @@
-import fetch from "isomorphic-unfetch";
 import React from "react";
+import fetch from "isomorphic-unfetch";
 
 const BlogId = ({ blog }) => {
   return (

@@ -6,6 +6,7 @@ const Home = ({ blogs }) => {
   return (
     <div>
       <h2>最新の記事</h2>
+
       <div>
         {blogs.map((blog) => (
           <React.Fragment key={blog.id}>

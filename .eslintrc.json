@@ -32,7 +32,7 @@
       "error",
       { "extensions": [".jsx", ".tsx"] }
     ],
-    "@typescript-eslint/no-explicit-any": "off", // any型を許容
-    "@typescript-eslint/explicit-module-boundary-types": "off" // 引数と戻り値の型指定をしない事を許容
+    "@typescript-eslint/no-explicit-any": "off" // any型を許容
+    // "@typescript-eslint/explicit-module-boundary-types": "off" // 引数と戻り値の型指定をしない事を許容
   }
 }
